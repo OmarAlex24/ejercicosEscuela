@@ -2,12 +2,12 @@
 
 #include <iostream>
 using namespace std;
-void imprimiArr(int arr[][3], int largo)
+void imprimiArr(int arr[][3], int fila, int col)
 {
 
-  for (int i = 0; i < largo; i++)
+  for (int i = 0; i < fila; i++)
   {
-    for (int j = 0; j < largo; j++)
+    for (int j = 0; j < col; j++)
     {
       cout << arr[i][j] << " ";
     }
@@ -15,14 +15,14 @@ void imprimiArr(int arr[][3], int largo)
   }
 }
 
-void cambiarFilas(int matriz[][3], int n)
+void cambiarFilas(int matriz[][3], int nF, int nC)
 {
-  int x = n;
-  for (int i = 0; i < n / 2; i++)
+  int x = nF;
+  for (int i = 0; i < nF / 2; i++)
   {
     x -= 1;
 
-    for (int j = 0; j < n; j++)
+    for (int j = 0; j < nC; j++)
     {
       int aux = matriz[i][j];
 
@@ -34,11 +34,13 @@ void cambiarFilas(int matriz[][3], int n)
 
 int main()
 {
-  int matriz[3][3] = {{1, 5, 6},
+  int matriz[5][3] = {{1, 5, 6},
                       {5, 1, 8},
-                      {6, 8, 1}};
+                      {6, 8, 1},
+                      {4, 5, 1},
+                      {11, 29, 33}};
 
-  cambiarFilas(matriz, 3);
-  imprimiArr(matriz, 3);
+  cambiarFilas(matriz, 5, 3);
+  imprimiArr(matriz, 5, 3);
   return 0;
 }

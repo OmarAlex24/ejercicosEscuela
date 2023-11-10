@@ -13,7 +13,7 @@ string ultimaP(string cadena) {
   return resCad;
 }
 int main() {
-  cout << ultimaP("Hola mundo cruel") << endl;
+  cout << ultimaP("") << endl;
 
   return 0;
 }
